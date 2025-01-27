@@ -12,4 +12,8 @@ class HomeController extends Controller
     {
         return view('website.home.index');
     }
+
+    public function aboutUs(){
+        return view('website.about.index');
+    }
 }

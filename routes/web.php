@@ -12,4 +12,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/', [HomeController::class, 'index'])->name('website.home');
+Route::controller(HomeController::class)->name('website.')->group(function () {
+    Route::get('/', 'index')->name('home');
+    Route::get('/about_us', 'aboutUs')->name('about.us');
+});

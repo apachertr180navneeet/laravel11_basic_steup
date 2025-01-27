@@ -22,9 +22,12 @@
 										<div class="header__navigation d-none d-xl-block">
 											<nav class="navigation-menu primary--menu">
 												<ul>
-													<li class="">
-														<a href="{{route('website.home')}}"><span>Home</span></a>
+													<li class="{{ request()->routeIs('website.home') ? 'active' : '' }}">
+														<a href="{{ route('website.home') }}"><span>Home</span></a>
 													</li>
+													<li class="{{ request()->routeIs('website.about.us') ? 'active' : '' }}">
+														<a href="{{ route('website.about.us') }}"><span>About Us</span></a>
+													</li>													
 												</ul>
 											</nav>
 										</div>
